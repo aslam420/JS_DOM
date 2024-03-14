@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Link one page to another using anchor tag -->
+    <a href="./index.html">
+        <h1 href="./index.html" class="page-header"> this is about page page</h1>
+    </a>
+    <!-- Link one page to another using using 'id' -->
+    <a id = "anchor-tag" href="./index.html">home page</a>
+
+</body>
+
+<script>
+    // We are changing the page location
+    document.querySelector("h1").addEventListener("click", ()=> {
+        location.href="./index.html";
+    });
+</script>
+</html>
+
+<!-- We can link one page to another in two ways :
+    1. Anchor Tag
+    2. location.href
+ -->

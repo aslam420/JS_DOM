@@ -1,0 +1,44 @@
+<!-- Task-6 : Word Counter -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+</head>
+<body>
+    <h1>Word Counter Application</h1>
+    <textarea id="textArea"></textarea>
+    <br>
+    <button type="button" id="wc-button">Count Word</button>
+    <!-- Contains Data -->
+    <h3 id="word-count"></h3>
+</body>
+
+<script type="text/javascript">
+    
+    // (0) Execute the function after clicking the button
+    document.getElementById("wc-button").addEventListener("click",wordCount);
+    // (1) Execute the Word Count function
+    function wordCount(){
+        // (2) Get the value of textarea
+        let str = document.getElementById("textArea").value;
+        // (3) Count the word
+        let wordCount  = countWord(str);
+        // (5) Display the word count
+        document.getElementById("word-count").innerText = wordCount;
+    }
+
+    // (4) Function to Count the word
+    function countWord(str){
+        return str.split(" ").length;
+    }
+
+</script>
+
+</html>
+
+
+
+
